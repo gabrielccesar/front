@@ -1,18 +1,44 @@
-function somar(){
+function coletarNumero1(){
     let numero1 = parseFloat(document.getElementById('numero1').value);
-    let numero2 = parseFloat(document.getElementById('numero2').value);
+    return numero1;
+}
 
-    let resultado = numero1 + numero2;
+function coletarNumero2(){
+    let numero2 = parseFloat(document.getElementById('numero2').value);
+    return numero2;
+}
+
+function somar(){
+    
+    let resultado = coletarNumero1() + coletarNumero2();
 
     document.getElementById('resultado').innerText = resultado;
 
 }
 
 function dividir(){
-    let numero1 = parseFloat(document.getElementById('numero1').value);
-    let numero2 = parseFloat(document.getElementById('numero2').value);
+    
+    if(numero2 ===0){
+        document.getElementById('resultado').
+        innerText = "Divisao por zero.";
+    }else{
+        let resultado = coletarNumero1() / coletarNumero2();
+        document.getElementById('resultado').innerText = resultado
+    }
+}
 
-    let resultado = numero1 / numero2;
+function subtrair(){
+    
+
+    let resultado = coletarNumero1() - coletarNumero2();
+
+    document.getElementById('resultado').innerText = resultado;
+
+}
+
+function multiplicar(){
+   
+    let resultado = coletarNumero1() * coletarNumero2();
 
     document.getElementById('resultado').innerText = resultado;
 
